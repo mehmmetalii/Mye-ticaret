@@ -1,0 +1,1 @@
+export const carItems=[{quantity:1, product:{productName:"Çubuk Kraker"}}]
