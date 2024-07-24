@@ -25,6 +25,7 @@ export default function ProductAdd() {
         <Form className="ui form">
         <MavvooTextInput name="productName" placeholder="Ürün adı" />
         <MavvooTextInput name="unitPrice" placeholder="Ürün Fiyatı" />
+        <Button color='green' type='sumbit'>Ekle</Button>
     
         </Form>
       </Formik>
