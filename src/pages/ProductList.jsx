@@ -1,4 +1,4 @@
-import React, { useState,usEffect, useEffect } from "react";
+import React, { useState,useEffect } from "react";
 import {
   TableRow,
   TableHeaderCell,
@@ -8,16 +8,22 @@ import {
   TableBody,
   MenuItem,
   Icon,
-  Label,
+
   Menu,
   Table,
+  Button,
 } from "semantic-ui-react";
 
 import ProductService from "../services/productService";
 
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/actions/cartAction";
+import {toast} from "react-toastify";
+
 
 export default function ProductList() {
+const dispatch = useDispatch()
   
   const [products, setProducts] = useState([]);
 
@@ -26,6 +32,11 @@ export default function ProductList() {
      let productService=new ProductService()
     productService.getProducts().then(result=>{console.log(result);setProducts(result.data)})
     },[])
+
+const handleAddToCart=(product)=>{
+  dispatch(addToCart(product));
+  toast.success(`${product.productName} sepete eklendi!`)
+}
 
   return (
     <div>
@@ -37,6 +48,7 @@ export default function ProductList() {
             <TableHeaderCell>Kategori Numarası</TableHeaderCell>
             <TableHeaderCell>Birim Fiyatı</TableHeaderCell>
             <TableHeaderCell>Ürün Stok</TableHeaderCell>
+            <TableHeaderCell></TableHeaderCell>
            {/* <TableHeaderCell>Sipariş Tarihi</TableHeaderCell> */}
 
           </TableRow>
@@ -51,7 +63,12 @@ export default function ProductList() {
          <TableCell>{product.categoryId}</TableCell>
          <TableCell>{product.unitPrice}</TableCell>
          <TableCell>{product.unitInStock}</TableCell>
-         {/* <TableCell>{product.orderDate}</TableCell> */}
+         <TableCell>
+          <Button onClick={()=>{handleAddToCart(product)}}>
+            Sepete Ekle
+          </Button>
+         </TableCell>
+         
        </TableRow>
        ))} 
         
