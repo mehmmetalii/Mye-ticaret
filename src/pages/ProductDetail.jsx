@@ -41,10 +41,10 @@ export default function ProductDetail() {
       <CardContent extra>
         <div className='ui two buttons'>
           <Button basic color='green'>
-            Approve
+           Ürün Ekle
           </Button>
           <Button basic color='red'>
-            Decline
+           Ürün Sil
           </Button>
         </div>
       </CardContent>

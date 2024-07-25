@@ -8,6 +8,7 @@ import ProductDetail from "../pages/ProductDetail";
 import CartDetail from "../pages/CartDetail";
 import { ToastContainer } from "react-toastify";
 import ProductAdd from "../pages/ProductAdd";
+import LoginDetail from "../pages/LoginDetail";
 export default function Dashboard() {
   return (
     <div>
@@ -24,6 +25,7 @@ export default function Dashboard() {
             <Route path="/products/:name" Component={ProductDetail} />
             <Route path="cart" Component={CartDetail} />
             <Route path="/product/add" Component={ProductAdd} />
+            <Route path="login" Component={LoginDetail}/>
             </Routes>
 
           

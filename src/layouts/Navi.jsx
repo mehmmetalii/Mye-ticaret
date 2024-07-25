@@ -6,6 +6,7 @@ import SignedOut from "./SignedOut";
 import SıgnedIn from "./SıgnedIn";
 import { useState } from "react";
 import { useNavigate} from "react-router";
+import { NavLink } from "react-router-dom";
 
 export default function Navi() {
   
@@ -29,7 +30,7 @@ debugger
     <div>
       <Menu inverted fixed="top">
         <Container>
-          <MenuItem name="home" />
+          <MenuItem as={NavLink} to="/" name="Ana Sayfa" />
           <MenuItem name="messages" />
 
           <MenuMenu position="right">
