@@ -19,7 +19,7 @@ export default function CartDetail() {
       {cartItem.product.productName}
       <Label>{cartItem.quantity}</Label>
 
-      <Button as={NavLink} to="paymend" animated="vertical">
+      <Button as={NavLink} to="pagmend" animated="vertical">
         <ButtonContent hidden> Onayla</ButtonContent>
         <ButtonContent visible>
           <Icon name="shop" />

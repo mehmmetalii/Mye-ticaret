@@ -7,7 +7,7 @@ export default function Categories() {
     <div>
       <Menu pointing vertical>
         <MenuItem as={NavLink} to="/" name="Ana Sayfa" />
-        <MenuItem  name="Masage" />
+        <MenuItem as={NavLink} to="infer"  name="Bilgilerim" />
         <MenuItem name="friends" />
       </Menu>
     </div>
