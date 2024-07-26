@@ -7,6 +7,7 @@ import SıgnedIn from "./SıgnedIn";
 import { useState } from "react";
 import { useNavigate} from "react-router";
 import { NavLink } from "react-router-dom";
+import Categories from "./Categories";
 
 export default function Navi() {
   
