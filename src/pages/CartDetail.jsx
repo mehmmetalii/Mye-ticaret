@@ -10,6 +10,7 @@ import {
   Icon,
   ButtonContent,
 } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 
 export default function CartDetail() {
   const { cartItems } = useSelector((state) => state.cart);
@@ -18,7 +19,7 @@ export default function CartDetail() {
       {cartItem.product.productName}
       <Label>{cartItem.quantity}</Label>
 
-      <Button animated="vertical">
+      <Button as={NavLink} to="paymend" animated="vertical">
         <ButtonContent hidden> Onayla</ButtonContent>
         <ButtonContent visible>
           <Icon name="shop" />

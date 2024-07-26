@@ -30,8 +30,10 @@ debugger
     <div>
       <Menu inverted fixed="top">
         <Container>
-          <MenuItem as={NavLink} to="/" name="Ana Sayfa" />
-          <MenuItem name="messages" />
+
+          <MenuItem  as={NavLink} to="/" name="Ana Sayfa" />   
+      
+   
 
           <MenuMenu position="right">
             {/* <CartSummary/> */}
@@ -43,6 +45,8 @@ debugger
           </MenuMenu>
         </Container>
       </Menu>
+      
     </div>
+    
   );
 }
