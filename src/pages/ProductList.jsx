@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect,useAuth } from "react";
 import {
   TableRow,
   TableHeaderCell,
@@ -22,6 +22,7 @@ import { addToCart } from "../store/actions/cartAction";
 import {toast} from "react-toastify";
 
 
+
 export default function ProductList() {
 const dispatch = useDispatch()
   
@@ -38,8 +39,10 @@ const handleAddToCart=(product)=>{
   toast.success(`${product.productName} sepete eklendi!`)
 }
 
+
   return (
     <div>
+    
       <Table celled>
         <TableHeader>
           <TableRow>

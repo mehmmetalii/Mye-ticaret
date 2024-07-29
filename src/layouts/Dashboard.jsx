@@ -3,7 +3,7 @@ import React from "react";
 import Categories from "./Categories";
 import ProductList from "../pages/ProductList";
 import { GridRow, GridColumn, Grid } from "semantic-ui-react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,Router } from "react-router-dom";
 import ProductDetail from "../pages/ProductDetail";
 import CartDetail from "../pages/CartDetail";
 import { ToastContainer } from "react-toastify";
@@ -12,6 +12,8 @@ import LoginDetail from "../pages/LoginDetail";
 
 import Pagmend from "./Pagmend";
 import information from "../pages/information";
+
+
 export default function Dashboard() {
   return (
     <div>
@@ -31,8 +33,10 @@ export default function Dashboard() {
             <Route path="login" Component={LoginDetail}/>
             { <Route path="cart/pagmend" Component={Pagmend}/> }
             <Route path="infer" Component={information}/>
+        
             
             </Routes>
+           
 
           
           </GridColumn>

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
 import { MenuItem,Image,Dropdown,DropdownMenu,DropdownItem } from 'semantic-ui-react'
 
 
 export default function SıgnedIn({signOut}) {
+
+  
   return (
     <div>
       <MenuItem>

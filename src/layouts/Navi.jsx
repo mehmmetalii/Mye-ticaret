@@ -7,13 +7,14 @@ import SıgnedIn from "./SıgnedIn";
 import { useState } from "react";
 import { useNavigate} from "react-router";
 import { NavLink } from "react-router-dom";
-import Categories from "./Categories";
+
 
 export default function Navi() {
   
   const {cartItems}=useSelector(state=>state.cart)
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   const negative=useNavigate()
+
 
   function handleSignOut() {
     setIsAuthenticated(false)
@@ -25,14 +26,19 @@ export default function Navi() {
     function handleSignIn() {
       setIsAuthenticated(true)
   }
+  
 debugger
   return (
     
     <div>
       <Menu inverted fixed="top">
         <Container>
+          
+
 
           <MenuItem  as={NavLink} to="/" name="Ana Sayfa" />   
+         
+      
       
    
 
@@ -41,8 +47,11 @@ debugger
             {cartItems.length>0&&<CartSummary />}
             {isAuthenticated?  <SıgnedIn signOut={handleSignOut} bisey="1"/>
             :<SignedOut signIn={handleSignIn} />}
+
+            
            
           
+
           </MenuMenu>
         </Container>
       </Menu>

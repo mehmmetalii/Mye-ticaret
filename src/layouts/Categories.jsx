@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState,useAuth } from "react";
 import { NavLink } from "react-router-dom";
 import { MenuItem, Menu } from "semantic-ui-react";
 
 export default function Categories() {
+
+  
+
   return (
     <div>
       <Menu pointing vertical>
