@@ -6,16 +6,16 @@ export default function LoginDetail() {
     
     <Form>
       <FormField>
-        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Ad" />
         <Divider />
 
-        <input type="text" placeholder="Last Name" />
+        <input type="text" placeholder="Soyad" />
         <Divider />
 
-        <input type="text" placeholder="Username" />
+        <input type="text" placeholder="Kullanıcı Adı" />
         <Divider />
 
-        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Şifre" />
       </FormField>
       
       <Button  >Kayıt Ol</Button>
