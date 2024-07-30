@@ -10,6 +10,7 @@ export default function CartSummary() {
   const {cartItems}=useSelector(state=>state.cart)
 debugger
   return (
+    
     <div>
       
       <Dropdown item text="Sepetiniz">

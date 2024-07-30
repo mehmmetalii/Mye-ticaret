@@ -5,7 +5,6 @@ import { MenuItem, Menu } from "semantic-ui-react";
 export default function Categories() {
 
   
-
   return (
     <div>
       <Menu pointing vertical>
